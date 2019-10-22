@@ -8,16 +8,15 @@ if [ $(playerctl status) != "No players found" ]; then
 	SHORT_OUTPUT=$(playerctl --player=$PLAYER status)
 
 	if [ "$PLAYER" == "spotify" ]; then
-		LABEL=""
+		LABEL=""
 		COLOR="#84bd00"
 
 	else
-		LABEL=fi
+		LABEL=""
 		COLOR=""
 	fi
 
 	echo "$LABEL $LONG_OUTPUT" # long text
 	echo "$LABEL $SHORT_OUTPUT" # short text
-	echo $COLOR
-	echo ""
+	echo "$COLOR"
 fi
